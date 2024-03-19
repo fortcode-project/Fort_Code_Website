@@ -17,11 +17,11 @@
                             <h2 data-aos="fade-up" style="color: #ffffff; font-family: arial; text-align: end;">
                                 {{ $item->title }}
                             </h2>
-                            <p data-aos="fade-up" data-aos-delay="100">
-                                {{ $item->description }}
+                            <p data-aos="fade-up" style="font-size: 1.1rem" data-aos-delay="100">
+                                {{ $item->description }}.
                             </p>
                             <a data-aos="fade-up" href="#" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop" style="width: 300px;">Adira já gratuitamente</a>
+                                data-bs-target="#staticBackdrop" style="width: 300px;font-size: 1rem;font-weight: 600">Adira já gratuitamente</a>
                         </div>
                     </div>
                 </div>
@@ -85,13 +85,12 @@
         <!-- ======= Services Section =======     -->
         <section id="services" class="services-mf pt-5 route">
             <div class="container">
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="title-box text-center">
                             <h3 class="title-a fw-bold" style="font-family: arial; font-size: 2.8rem;">
                                 Produto Fort-Code
                             </h3>
-
                             <div class="line-mf"></div>
                         </div>
                     </div>
@@ -109,8 +108,8 @@
                                     profissionalizar o seu ofício na internet.
                                     Empresas, freelancers, criativos
                                 </p>
-                                <a href="#" style="background-color: #0b539a" class="btn btn-primary px-3 py-3 fs-5"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adira já gratuitamente</a>
+                                <a href="#" style="background-color: #0b539a" class="btn btn-primary px-4 py-2"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size: 1rem;font-weight: 600">Adira já gratuitamente</a>
                             </div>
                         </div>
                     </div>
@@ -119,7 +118,7 @@
             </div>
         </section>
 
-        <section id="features" class="features" style="margin-top: -15rem;">
+        <section id="features" class="features" style="margin-top: -12rem;">
             <div class="container">
 
                 <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
@@ -128,7 +127,7 @@
                         <img src="{{ asset('site/assets/img/pc.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-7" style="margin-top: -5rem;">
-                        <h3 class=" text-capitalize mb-4" style="font-size: 2rem;">Beneficios de Pacote Website Clássico.
+                        <h3 class=" text-capitalize mb-4" style="font-size: 2rem;">Benefícios do Pacote Website Clássico
                         </h3>
                         <ul>
                             <li><i class="bi bi-check"></i> Website com modelo clássico Fort-Code</li>
@@ -145,39 +144,40 @@
             </div>
         </section><!-- End Features Section -->
 
-        <section class="project" style="margin-top: -100px;">
+        <section class="project mb-4" style="margin-top: -100px;">
             <div class="container-fluid ">
                 <div class="container justify-content-center">
-                    <div class="text-center mb-4">
-                        <h1>Nossos Modelos de Website Clássico</h1>
+                    <div class="text-center mb-5">
+                        <h1 class="mb-3">Nossos Modelos de Website Clássico</h1>
+                        <p style="font-size: 1rem;">Websites clássicos intuitivos para toda a empresa que quer ter mais visibilidade na internet e tornar a sua empresa mais profissional.</p>
                     </div>
 
-                    <div class="col-md-12 d-flex justify-content-center">
-                        <div class="row">
-                            <div class="card mb-4" style="width: 25rem;">
-                                <a href="https://fortcode-project.github.io/Modelo_Portfolio/" target="_blank">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12 col-md-3 col-lg-4" >
+                                <a href="https://portifolio.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/port.png') }}" class="card-img-top"
-                                        style="width: 100%;">
+                                        style="width: 100%;height:13rem">
                                     <div class="card-body">
-                                        <h3>Portfolio</h3>
+                                        <h3>Portfólio</h3>
                                     </div>
                                 </a>
                             </div>
 
-                            <div class="card mb-4" style="width: 25rem;">
-                                <a href="https://fortcode-project.github.io/Modelo_servicos/" target="_blank">
+                            <div class="col-12 col-md-3 col-lg-4">
+                                <a href="https://servico.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/servico.png') }}" class="card-img-top"
-                                        alt="...">
+                                        alt="..." style="width: 100%;height:13rem">
                                     <div class="card-body">
                                         <h3>Serviço</h3>
                                     </div>
                                 </a>
                             </div>
 
-                            <div class="card mb-4" style="width: 25rem;">
-                                <a href="https://fortcode-project.github.io/Modelo_Produto/" target="_blank">
+                            <div class="col-12 col-md-3 col-lg-4">
+                                <a href="https://produto.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
-                                        alt="...">
+                                        alt="..." style="width: 100%;height:13rem">
                                     <div class="card-body">
                                         <h3>Produto</h3>
                                     </div>
@@ -192,21 +192,40 @@
         <section class="text-white" id="detalhesite">
             <div class="container-fluid">
                 <div class="container">
-                    <div style="margin-bottom: 60px;">
-                        <h1>Porque ter um website</h1>
+                    <div style="margin-bottom: 40px;">
+                        <h2>Porquê ter um website?</h2>
                     </div>
                     <div class="">
                         <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                                <p><i class="bi bi-check-all"></i> Canal de vendas aberto 24H por dia todo ano</p>
-                                <p><i class="bi bi-check-all"></i> Contacto 24H por dia com clientes</p>
-                                <p><i class="bi bi-check-all"></i> Maior visibilidade a potenciais clientes</p>
-                                <p><i class="bi bi-check-all"></i> Expanção do seu mercado de actuação</p>
-                                <p><i class="bi bi-check-all"></i> Promoção focada nos seus produtos e serviços</p>
-                                <p><i class="bi bi-check-all"></i> Grande diferencial em relação aos seus concorrentes</p>
-                                <p><i class="bi bi-check-all"></i> Mais credibilidade para sua empresa/marca</p>
-                                <a data-aos="fade-up" href="#" class="btn btn-primary p-4 fs-5 mt-2"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 300px;">Adira
+                            <div class="col-12 col-md-6 col-sm-12">
+                                <p>
+                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
+                                    <span style="font-size: 1.1rem">Canal de vendas aberto 24H por dia todo ano</span>
+                                </p>
+                                <p>
+                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
+                                    <span style="font-size: 1.1rem">Contacto 24H por dia com clientes</span>
+                                </p>
+                                <p>
+                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
+                                    <span style="font-size: 1.1rem">Maior visibilidade a potenciais clientes</span>
+                                </p>
+                                <p>
+                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
+                                    <span style="font-size: 1.1rem">Expanção do seu mercado de actuação</span>
+                                </p>
+                                <p>
+                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i> 
+                                    <span style="font-size: 1.1rem">Promoção focada nos seus produtos e serviços</span>
+                                </p>
+                                <p><i class="bi bi-circle-fill" style="font-size: 14px"></i> 
+                                    <span style="font-size: 1.1rem">Grande diferencial em relação aos seus concorrentes</span>
+                                </p>
+                                <p><i class="bi bi-circle-fill" style="font-size: 14px"></i>
+                                    <span  style="font-size: 1.1rem">Mais credibilidade para sua empresa/marca</span>
+                                </p>
+                                <a data-aos="fade-up" href="#" class="btn btn-primary py-3 mt-2"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 300px;font-size: 1rem;font-weight: 600">Adira
                                     já gratuitamente</a>
                             </div>
 
@@ -232,7 +251,8 @@
 
                         <div class="row gy-4">
                             <div class="col-lg-7 position-relative about-img" data-aos="fade-up" data-aos-delay="150">
-
+                               
+                               
                             </div>
                             <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                                 @foreach ($about as $item)
@@ -241,11 +261,11 @@
                                             {{ $item->p1 }}
                                         </p>
                                         <ul>
-                                            <li><i class="bi bi-check2-all"></i>Fornecer soluções e inovações digitais que
+                                            <li><i class="bi bi-check"></i>Fornecer soluções e inovações digitais que
                                                 avancem a economia angolana para a prosperidade de todos os angolanos. </li>
-                                            <li><i class="bi bi-check2-all"></i>Ser a marca de referência e parceiro de
+                                            <li><i class="bi bi-check"></i>Ser a marca de referência e parceiro de
                                                 eleição em serviços digitais.</li>
-                                            <li><i class="bi bi-check2-all"></i>Permitir que as empresas angolanas adotem
+                                            <li><i class="bi bi-check"></i>Permitir que as empresas angolanas adotem
                                                 facilmente soluções digitais.</li>
                                         </ul>
                                         <p>
@@ -253,7 +273,7 @@
                                         </p>
 
                                         <div class="position-relative mt-4">
-                                            <img src="{{ url("/storage/$fundo->image" ?? '') }}" class="img-fluid"
+                                            <img src="{{ (!empty($fundo->image)) ? asset('storage/'.$fundo->image) : '' }}" class="img-fluid"
                                                 alt="">
                                             <div class="call-us position-absolute rounded-2">
                                                 <a href="#" style="background-color: #0b539a; z-index:999;"

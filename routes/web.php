@@ -5,20 +5,20 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-    //Routes do site 
-    Route::controller(SiteController::class)->group(function(){
-        Route::get("/", "index")->name("site.karamba.index");
-        Route::get("/about", "about")->name("site.karamba.about");
-        Route::get("/produtos", "products")->name("site.karamba.products");
-        Route::get("/contactos", "contact")->name("site.karamba.contact");
-        Route::get("/bilhetes", "bilhete")->name("site.karamba.bilhete");
-        Route::get("/bilhete/{id}", "FormBilhetes")->name("admin.get.bilhete");
-        Route::post("/comprar/bilhete", "payment")->name("site.karamba.payment.bilhete");
-        Route::post("/envio/email/client", "sendEmail")->name("site.karamba.send.email");
-        Route::post("/form/website", "formWebsite")->name("site.karamba.website");
+//Routes do site 
+Route::controller(SiteController::class)->group(function(){
+    Route::get("/", "index")->name("site.karamba.index");
+    Route::get("/about", "about")->name("site.karamba.about");
+    Route::get("/produtos", "products")->name("site.karamba.products");
+    Route::get("/contactos", "contact")->name("site.karamba.contact");
+    Route::get("/bilhetes", "bilhete")->name("site.karamba.bilhete");
+    Route::get("/bilhete/{id}", "FormBilhetes")->name("admin.get.bilhete");
+    Route::post("/comprar/bilhete", "payment")->name("site.karamba.payment.bilhete");
+    Route::post("/envio/email/client", "sendEmail")->name("site.karamba.send.email");
+    Route::post("/form/website", "formWebsite")->name("site.karamba.website");
 
-        Route::get("/api/datas", "api");
-    });
+    Route::get("/api/datas", "api");
+});
 
     //Routes do administrador do site para manipulação
 Route::middleware("auth")->controller(AdminController::class)->prefix("/admin/")->group(function(){

@@ -62,13 +62,22 @@ class SiteController extends Controller
     }
 
     public function fundoAbout(){
-        $about = Fundo::where("tipo", "About")->first();
-        return $about;
+        $data = Fundo::get();
+        if(count($data) > 0){
+            $about = Fundo::where("tipo", "About")->first();
+            return  $about;
+        }
+        
+       
     }
 
     public function fundo(){
-        $about = Fundo::where("tipo", "Aboutp", null)->first();
-        return $about;
+        $data = Fundo::get();
+        if( isset ($data) and count($data) > 0){
+            $about = Fundo::where("tipo", "Aboutp")->first();
+            return $about;
+        }
+
     }
 
     public function about(){

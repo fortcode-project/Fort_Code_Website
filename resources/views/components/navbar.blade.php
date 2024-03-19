@@ -9,8 +9,8 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a  href="#hero">Principal</a></li>
-            <li><a  href="#about">Sobre</a></li>
             <li><a  href="#services">Produtos</a></li>
+            <li><a  href="#about">Sobre</a></li>
             <li><a  href="#contact">Contacto</a></li>
           </ul>
         </nav>
