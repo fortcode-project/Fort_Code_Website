@@ -41,12 +41,12 @@
                         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="why-box text-dark" style="background: var(--color); height: 23rem;">
                                 <div style="margin-top: 2.5rem;">
-                                  <h3 style="color: var(--letra);">
-                                    {{ $item->title }}
-                                </h3>
-                                <p style="color: var(--letra);">
-                                    {{ $item->description }}
-                                </p>
+                                    <h3 style="color: var(--letra);">
+                                        {{ $item->title }}
+                                    </h3>
+                                    <p style="color: var(--letra);">
+                                        {{ $item->description }}
+                                    </p>
                                 </div>
                             </div>
                         </div><!-- End Why Box -->
@@ -128,7 +128,8 @@
                         <img src="{{ asset('site/assets/img/pc.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-7" style="margin-top: -5rem;">
-                        <h3 class=" text-capitalize mb-4" style="font-size: 2rem;">Beneficios de Pacote Website Clássico.</h3>
+                        <h3 class=" text-capitalize mb-4" style="font-size: 2rem;">Beneficios de Pacote Website Clássico.
+                        </h3>
                         <ul>
                             <li><i class="bi bi-check"></i> Website com modelo clássico Fort-Code</li>
                             <li><i class="bi bi-check"></i> Painel para controlar o conteúdo do seu website clássico</li>
@@ -231,7 +232,7 @@
 
                         <div class="row gy-4">
                             <div class="col-lg-7 position-relative about-img" data-aos="fade-up" data-aos-delay="150">
-                                
+
                             </div>
                             <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                                 @foreach ($about as $item)
@@ -254,11 +255,12 @@
                                         <div class="position-relative mt-4">
                                             <img src="{{ url("/storage/$fundo->image" ?? '') }}" class="img-fluid"
                                                 alt="">
-                                                <div class="call-us position-absolute rounded-2">
-                                                  <a href="#" style="background-color: #0b539a; z-index:999;"
-                                                      class="btn btn-primary px-3 py-2 fs-5 cursor-pointer" data-bs-toggle="modal"
-                                                      data-bs-target="#staticBackdrop">Adira já gratuitamente</a>
-                                              </div>
+                                            <div class="call-us position-absolute rounded-2">
+                                                <a href="#" style="background-color: #0b539a; z-index:999;"
+                                                    class="btn btn-primary px-3 py-2 fs-5 cursor-pointer"
+                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adira já
+                                                    gratuitamente</a>
+                                            </div>
                                         </div>
                                     </div>
                                 @endforeach
