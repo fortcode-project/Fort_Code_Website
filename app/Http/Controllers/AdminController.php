@@ -254,7 +254,7 @@ class AdminController extends Controller
 
         if ($request->hasFile("image")) {
             //$destinationPath = "public/image";
-            $image = $request->file("image");
+            //$image = $request->file("image");
             //$imageName = $image->getClientOriginalName(); 
             $path = $request->file("image")->store("uploads/fundo"); //podes meter uploads/retangulo ou quadrado
 

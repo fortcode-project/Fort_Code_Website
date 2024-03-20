@@ -2,9 +2,9 @@
     :root{
       --color: {{$color->codigo ?? ""}};
       --letra: {{$color->letra ?? ""}};
-      --aboutg: url({{"/storage/".$fundoAbout->image  ?? ''}});
-      --aboutp: url({{"/storage/".$fundo->image  ?? ''}});
-      --start: url({{"/storage/".$start->image ?? ''}});
+      --aboutg: url("/storage/{{$fundoAbout->image  ?? ''}}");
+      --aboutp: url("/storage/{{$fundo->image  ?? ''}}");
+      --start: url("/storage/{{$start->image ?? ''}}");
     }
 
     /* ======== Formatação da NAVBAR  ======= */
@@ -45,7 +45,7 @@
         color: var(--letra);
     }
 
-    main .about .container .about-img{
+    main .about .container .about-img {
         background-size: cover; 
         background-position: center;
         background-image: var(--aboutg);
