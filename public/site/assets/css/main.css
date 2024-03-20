@@ -148,7 +148,7 @@ section {
   display: inline-block;
   padding-right: 10px;
   color: #676775;
-  content: "/";
+  content: "";
 }
 
 @media (max-width: 992px) {
@@ -166,6 +166,18 @@ section {
 
   .breadcrumbs ol li {
     display: inline-block;
+  }
+
+  main #services {
+    margin-bottom: 5rem;
+  }
+
+  main #services .service-content{
+    margin-top: 5rem;
+  }
+
+  main #features{
+    margin-top: 5rem;
   }
 }
 
@@ -267,13 +279,15 @@ section {
   border-bottom: 1px solid #fff;
   -webkit-box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.49);
 -moz-box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.49);
-box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.49);
+  box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.49);
 }
 
 @media (max-width: 575px) {
   .header {
     height: 70px;
   }
+
+
 }
 
 .header.sticked {
@@ -326,6 +340,7 @@ section {
   main #detalhesite .container img{
     margin-top: -10rem;
   }
+
   .navbar {
     padding: 0;
   }
@@ -609,17 +624,10 @@ section {
   z-index: 100;
 }
 
-.about .call-us h4 {
-  font-size: 24px;
+.about .section-header p {
+  font-family: arial; 
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 5px;
-  font-family: var(--font-default);
-}
-
-.about .call-us p {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--color-primary);
 }
 
 .about .content ul {
@@ -1799,6 +1807,10 @@ main .intro{
   text-align: center;
 }
 
+main #services .title-box h3{
+  font-size: 2.8rem;
+}
+
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
@@ -1902,6 +1914,14 @@ main .intro{
     font-size: 22px;
   }
 
+  main #detalhesite .container p>i{
+    font-size: 14px
+  }
+
+  main #detalhesite .container p>span{
+    font-size: 1.1rem
+  }
+
   #hero .container div h2,
     #hero .container div a{
       color: #ffffff;
@@ -1978,7 +1998,13 @@ main .intro{
   /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+main #features{
+  margin-top: -12rem;
+}
 
+main #features .container h3{
+  font-size: 2rem;
+}
 
 .features .features-item+.features-item {
   margin-top: 100px;
@@ -2018,3 +2044,13 @@ main .intro{
 .features .features-item p:last-child {
   margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+
+main #project .container img{
+  width: 100%;
+  height:13rem
+}
+
