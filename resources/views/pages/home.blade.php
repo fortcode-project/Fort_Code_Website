@@ -155,7 +155,7 @@
                     <div class="col-12 col-md-12 col-lg-12">
                         <div class="row g-4 justify-content-center">
                             <div class="col-12 col-md-3 col-lg-4" >
-                                <a href="https://portifolio.fortcodedev.com/" target="_blank" class="card">
+                                <a href="https://portfolio.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/port.png') }}" class="card-img-top"
                                         style="width: 100%;height:13rem">
                                     <div class="card-body">
