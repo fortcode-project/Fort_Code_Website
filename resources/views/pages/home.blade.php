@@ -3,8 +3,8 @@
 @section('content')
     @include('components.style')
     @include('components.navbar')
-    @include('components.product')
     @include('components.form')
+    @include('components.product')
     @include('sweetalert::alert')
 
     <section id="hero" class="hero d-flex align-items-center section-bg section-t">
@@ -14,14 +14,15 @@
                     <div class="col-lg-5 order-1 order-lg-1 d-flex flex-column align-items-lg-start text-center text-lg-start"
                         style="text-align: end;">
                         <div class="descri">
-                            <h2 data-aos="fade-up" style="color: #ffffff; font-family: arial; text-align: end;">
+                            <h2 data-aos="fade-up">
                                 {{ $item->title }}
                             </h2>
-                            <p data-aos="fade-up" style="font-size: 1.1rem" data-aos-delay="100">
+                            <p data-aos="fade-up" data-aos-delay="100">
                                 {{ $item->description }}.
                             </p>
-                            <a data-aos="fade-up" href="#" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop" style="width: 300px;font-size: 1rem;font-weight: 600">Adira já gratuitamente</a>
+                            <button style="width: 300px;font-size: 1rem;font-weight: 600" type="button" data-aos="fade-up" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Adira já gratuitamente
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@
 
                                         <div>
                                             <a href="#" style="background-color: #0b539a;" class="btn btn-primary"
-                                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adira já
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal">Adira já
                                                 gratuitamente</a>
                                         </div>
                                     </div>
@@ -80,15 +81,16 @@
                 </div>
 
             </div>
-        </section><!-- End Why Us Section -->
+        </section>
+        <!-- End Why Us Section -->
 
-        <!-- ======= Services Section =======     -->
+        <!-- ======= Services Section ======= -->
         <section id="services" class="services-mf pt-5 route">
             <div class="container">
                 <div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="title-box text-center">
-                            <h3 class="title-a fw-bold" style="font-family: arial; font-size: 2.8rem;">
+                            <h3 class="title-a fw-bold">
                                 Produto Fort-Code
                             </h3>
                             <div class="line-mf"></div>
@@ -109,7 +111,7 @@
                                     Empresas, freelancers, criativos
                                 </p>
                                 <a href="#" style="background-color: #0b539a" class="btn btn-primary px-4 py-2"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size: 1rem;font-weight: 600">Adira já gratuitamente</a>
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal" style="font-size: 1rem;font-weight: 600">Adira já gratuitamente</a>
                             </div>
                         </div>
                     </div>
@@ -118,17 +120,18 @@
             </div>
         </section>
 
-        <section id="features" class="features" style="margin-top: -12rem;">
+        <!-- Features Section -->
+        <section id="features" class="features">
             <div class="container">
 
                 <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
                     <div class="col-md-5">
-                        <img src="{{ asset('site/assets/img/pc.png') }}" class="img-fluid" alt="">
+                        <img src="{{asset('site/assets/img/pc.png')}}" class="img-fluid" alt="A sua rede está lenta para o carregamento da 
+                        imagem ou o seu navegador não suporte para exibir a imagem">
                     </div>
-                    <div class="col-md-7" style="margin-top: -5rem;">
-                        <h3 class=" text-capitalize mb-4" style="font-size: 2rem;">Benefícios do Pacote Website Clássico
-                        </h3>
+                    <div class="col-md-7">
+                        <h3 class="text-capitalize mb-4">Benefícios do Pacote Website Clássico</h3>
                         <ul>
                             <li><i class="bi bi-check"></i> Website com modelo clássico Fort-Code</li>
                             <li><i class="bi bi-check"></i> Painel para controlar o conteúdo do seu website clássico</li>
@@ -142,8 +145,10 @@
                 </div><!-- Features Item -->
 
             </div>
-        </section><!-- End Features Section -->
-
+        </section>
+        <!-- End Features Section -->
+        
+        <!-- Project Section -->
         <section class="project mb-4" style="margin-top: -100px;">
             <div class="container-fluid ">
                 <div class="container justify-content-center">
@@ -156,8 +161,7 @@
                         <div class="row g-4 justify-content-center">
                             <div class="col-12 col-md-3 col-lg-4" >
                                 <a href="https://portfolio.fortcodedev.com/" target="_blank" class="card">
-                                    <img src="{{ asset('site/assets/img/port.png') }}" class="card-img-top"
-                                        style="width: 100%;height:13rem">
+                                    <img src="{{ asset('site/assets/img/port.png') }}" class="card-img-top">
                                     <div class="card-body">
                                         <h3>Portfólio</h3>
                                     </div>
@@ -167,7 +171,7 @@
                             <div class="col-12 col-md-3 col-lg-4">
                                 <a href="https://servico.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/servico.png') }}" class="card-img-top"
-                                        alt="..." style="width: 100%;height:13rem">
+                                        alt="...">
                                     <div class="card-body">
                                         <h3>Serviço</h3>
                                     </div>
@@ -177,7 +181,7 @@
                             <div class="col-12 col-md-3 col-lg-4">
                                 <a href="https://produto.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
-                                        alt="..." style="width: 100%;height:13rem">
+                                        alt="...">
                                     <div class="card-body">
                                         <h3>Produto</h3>
                                     </div>
@@ -199,33 +203,33 @@
                         <div class="row">
                             <div class="col-12 col-md-6 col-sm-12">
                                 <p>
-                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
-                                    <span style="font-size: 1.1rem">Canal de vendas aberto 24H por dia todo ano</span>
+                                    <i class="bi bi-circle-fill"></i>
+                                    <span>Canal de vendas aberto 24H por dia todo ano</span>
                                 </p>
                                 <p>
-                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
-                                    <span style="font-size: 1.1rem">Contacto 24H por dia com clientes</span>
+                                    <i class="bi bi-circle-fill"></i>
+                                    <span>Contacto 24H por dia com clientes</span>
                                 </p>
                                 <p>
-                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
-                                    <span style="font-size: 1.1rem">Maior visibilidade a potenciais clientes</span>
+                                    <i class="bi bi-circle-fill"></i>
+                                    <span>Maior visibilidade a potenciais clientes</span>
                                 </p>
                                 <p>
-                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i>
-                                    <span style="font-size: 1.1rem">Expanção do seu mercado de actuação</span>
+                                    <i class="bi bi-circle-fill"></i>
+                                    <span>Expanção do seu mercado de actuação</span>
                                 </p>
                                 <p>
-                                    <i class="bi bi-circle-fill" style="font-size: 14px"></i> 
-                                    <span style="font-size: 1.1rem">Promoção focada nos seus produtos e serviços</span>
+                                    <i class="bi bi-circle-fill"></i> 
+                                    <span>Promoção focada nos seus produtos e serviços</span>
                                 </p>
-                                <p><i class="bi bi-circle-fill" style="font-size: 14px"></i> 
-                                    <span style="font-size: 1.1rem">Grande diferencial em relação aos seus concorrentes</span>
+                                <p><i class="bi bi-circle-fill"></i> 
+                                    <span>Grande diferencial em relação aos seus concorrentes</span>
                                 </p>
-                                <p><i class="bi bi-circle-fill" style="font-size: 14px"></i>
-                                    <span  style="font-size: 1.1rem">Mais credibilidade para sua empresa/marca</span>
+                                <p><i class="bi bi-circle-fill"></i>
+                                    <span>Mais credibilidade para sua empresa/marca</span>
                                 </p>
                                 <a data-aos="fade-up" href="#" class="btn btn-primary py-3 mt-2"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 300px;font-size: 1rem;font-weight: 600">Adira
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 300px;font-size: 1rem;font-weight: 600">Adira
                                     já gratuitamente</a>
                             </div>
 
@@ -238,21 +242,17 @@
             </div>
         </section>
 
-        <!-- ======= About Section ======= -->
+        <!-- About Section -->
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
-
                 <div class="d-flex">
                     <div>
                         <div class="col-sm-12 section-header d-flex justify-content-md-center justify-content-sm-center">
-                            {{-- <h2>Quem Somos</h2> --}}
-                            <p style="font-family: arial; font-size: 2.8rem;" class=" fw-bold">Somos a Fort-Code</p>
+                            <p class="fw-bold">Somos a Fort-Code</p>
                         </div>
 
                         <div class="row gy-4">
                             <div class="col-lg-7 position-relative about-img" data-aos="fade-up" data-aos-delay="150">
-                               
-                               
                             </div>
                             <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
                                 @foreach ($about as $item)
@@ -278,7 +278,7 @@
                                             <div class="call-us position-absolute rounded-2">
                                                 <a href="#" style="background-color: #0b539a; z-index:999;"
                                                     class="btn btn-primary px-3 py-2 fs-5 cursor-pointer"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">Adira já
+                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Adira já
                                                     gratuitamente</a>
                                             </div>
                                         </div>
@@ -316,12 +316,12 @@
 
             </div>
         </section>
-        <!-- ======= End About Section ===== -->
+        <!-- End About Section -->
 
         @include('components.contact')
     </main>
     <!-- End main -->
-    
+
     <div class="container-fluid mb-2">
         <div class="container position-relative">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
