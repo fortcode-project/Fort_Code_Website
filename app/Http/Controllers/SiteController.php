@@ -138,7 +138,6 @@ class SiteController extends Controller
     }
 
     public function payment(Request $request){
-
         $dados = new customer();
 
         $dados->name = $request->name;
@@ -147,18 +146,12 @@ class SiteController extends Controller
         $dados->bilhete_id = $request->id;
 
         if ($image = $request->file('anexo')) {
-
             $destinationPath = 'factura/';
-
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-
             $image->move($destinationPath, $profileImage);
-
             $dados->anexo = $profileImage;
         }
-
         $dados->save();
-
         return redirect()->back();
     }
 
@@ -183,52 +176,4 @@ class SiteController extends Controller
 
     //     return view("pages.datas", ["apiArray" => $apiArray]);
     // }
-
-    public function formWebsite(Request $request){
-        $request->validate([
-            'name' => 'required',
-            'ultimonome' => 'required',
-            'telefone' => 'required',
-            'email' => 'required|email',
-            'company' => 'required',
-            'coorporativo' => 'required',
-            'representante' => 'required',
-            'negocio' => 'required',
-            'status' => 'required',
-            'tempo' => 'required',
-            'organizacao' => 'required',
-            'industria' => 'required',
-            'nif' => 'required',
-            'rendimento' => 'required',
-            'website' => 'required',
-            'dominio' => 'required',
-            'funcionalidade' => 'required',
-            'price' => 'required|numeric',
-        ]);
-        
-        Mail::to("pachecobarrosodig3@gmail.com")
-        ->send(new website(
-            $request->name,
-            $request->ultimonome,
-            $request->telefone,
-            $request->email,
-            $request->company,
-            $request->coorporativo,
-            $request->representante,
-            $request->negocio,
-            $request->status,
-            $request->tempo,
-            $request->organizacao,
-            $request->industria,
-            $request->nif,
-            $request->rendimento,
-            $request->website,
-            $request->dominio,
-            $request->funcionalidade,
-            $request->price
-        ));
-
-        Alert::success("Solicitação Enviada");
-        return redirect()->back();
-    }
 }
