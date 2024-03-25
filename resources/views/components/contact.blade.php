@@ -86,13 +86,11 @@
             @media screen and (min-width: 1024px){
               .contact .container-fluid .php-email-form-b{
                 width: 740px;
-                border: solid 1px blue;
               }
 
               .contact .container-fluid .map-responsive{
                 margin-left: 16px;
                 width: 740px;
-                border: solid 1px blue;
               }
 
               .contact .container-fluid .map-responsive iframe{
@@ -122,14 +120,11 @@
 
             /* TABLET RESPONSIVE*/
             @media screen and (min-width: 768px) and (max-width: 1023px){
-              .contact .container-fluid .php-email-form-b{
-                border: solid 1px blue;
-              }
+              
 
               .contact .container-fluid .map-responsive{
                 width: 430px;
                 margin-left: 10px;
-                border: solid 1px blue;
                 height: 440px !important;
               }
 
