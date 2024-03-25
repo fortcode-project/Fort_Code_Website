@@ -4,7 +4,7 @@
     <h2>Contacto</h2>
     <p style="font-family: arial;">Contacte-nos</p>
   </div>
-    <div class="container" data-aos="fade-up">
+    <div class="container-fluid px-3 px-md-3 px-lg-4" data-aos="fade-up">
         @foreach ($contact as $item)
           <div class="row gy-4">
   
@@ -52,9 +52,9 @@
   
           </div>
         @endforeach
-        <div class=" row  col-md-12 col-sm-12 col-xs-12">
+        <div class="row gy-4">
           <div class="col-md-6">
-            <form action="{{route("site.karamba.send.email")}}" method="post"  class="php-email-form-b p-2">
+            <form action="{{route("site.karamba.send.email")}}" method="post"  class="php-email-form-b p-3">
               @csrf
               <div class="row">
                 <div class="col-xl-6 form-group">
@@ -76,59 +76,104 @@
             </form><!--End Contact Form -->
           </div>
     
-          <div class="col-md-6 mt-4  col-sm-12 col-xs-12 map-responsive">
-            <iframe class="col" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.702279296744!2d13.188649!3d-8.9072458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4d88a49015f%3A0x1888d38a18c40ef0!2sTSE%20Luanda!5e0!3m2!1spt-PT!2sao!4v1710592735820!5m2!1spt-PT!2sao" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="col-md-6 map-responsive " style="margin-top: 3.30rem !important;">
+            <iframe style="px-3" class="col" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.702279296744!2d13.188649!3d-8.9072458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4d88a49015f%3A0x1888d38a18c40ef0!2sTSE%20Luanda!5e0!3m2!1spt-PT!2sao!4v1710592735820!5m2!1spt-PT!2sao" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <style>
 
             /* DESKTOP RESPONSIVE */
             @media screen and (min-width: 1024px){
-              .contact .container .map-responsive{
-                margin-left: 21px;
-                width: 627px;
-                height: 450px;
+              .contact .container-fluid .php-email-form-b{
+                width: 740px;
+                border: solid 1px blue;
               }
 
-              .contact .container .map-responsive iframe{
+              .contact .container-fluid .map-responsive{
+                margin-left: 16px;
+                width: 740px;
+                border: solid 1px blue;
+              }
+
+              .contact .container-fluid .map-responsive iframe{
                 width: 100%;
               }
-            }
 
-            /* TABLET RESPONSIVE*/
-            @media screen and (min-width: 768px) and (max-width: 1023px){
-              .contact .container .map-responsive{
-                width: 450px;
-                margin-left: 18px;
-                height: 410px !important;
-              }
+              .contact .info-item {
+                  width: 740px;
+                }
 
-              .contact .container .map-responsive iframe{
-                width: 100%;
-              }
-            }
-
-            /* MOBILE RESPONSIVE */
-            @media screen and (max-width: 767px){
-              .contact .container .map-responsive{
-                height: 300px !important;
-              }
-            }
-
-            .contact .container .map-responsive{
+                .contact .container-fluid .map-responsive{
                 overflow:hidden;
-                padding-bottom:26%;
-                position:relative;
+                padding-bottom:24%;
+                position:relative; 
                 height:0;
-              }
+                
+            }
 
-              .map-responsive iframe{
+            .map-responsive iframe{
               left:0;
               top:0;
               height:100%;
               width:100%;
               position:absolute;
+            }
+            }
+
+            /* TABLET RESPONSIVE*/
+            @media screen and (min-width: 768px) and (max-width: 1023px){
+              .contact .container-fluid .php-email-form-b{
+                border: solid 1px blue;
               }
+
+              .contact .container-fluid .map-responsive{
+                width: 430px;
+                margin-left: 10px;
+                border: solid 1px blue;
+                height: 440px !important;
+              }
+
+              .contact .container-fluid .map-responsive iframe{
+                width: 100%;
+              }
+
+              .contact .container-fluid .map-responsive{
+                overflow:hidden;
+                padding-bottom:26.50%;
+                position:relative; 
+                height:0;
+            }
+
+            .map-responsive iframe{
+              left:0;
+              top:0;
+              height:100%;
+              width:100%;
+              position:absolute;
+            }
+            }
+
+            /* MOBILE RESPONSIVE */
+            @media screen and (max-width: 767px){
+              .contact .container-fluid .map-responsive{
+                height: 300px !important;
+              }
+
+              .contact .container-fluid .map-responsive{
+                overflow:hidden;
+                padding-bottom:26.50%;
+                position:relative; 
+                height:0;
+            }
+
+            .map-responsive iframe{
+              left:0;
+              top:0;
+              height:100%;
+              width:100%;
+              position:absolute;
+            }
+            }
           </style>
 
         </div>

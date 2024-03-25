@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RequestEmail;
 use App\Mail\Envio;
+use App\Mail\Send;
 use App\Mail\website;
 use App\Models\About;
 use App\Models\Anuncio;
@@ -165,13 +166,13 @@ class SiteController extends Controller
     }
 
     public function sendEmail(Request $request){
-        $data = Mail::to("{{$request->email}}")->send(new Envio([
-            "name" => $request->name,
-            "email" => $request->email,
-            "subject" => $request->subject,
-            "message" => $request->message,
-      ]));
-
+        Mail::to("albertocativa653@gmail.com")
+        ->send(new Envio(
+            $request->name,
+            $request->email,
+            $request->subject,
+            $request->message
+        ));        
        return redirect()->back();
     }
 

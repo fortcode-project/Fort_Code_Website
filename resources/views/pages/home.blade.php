@@ -7,12 +7,11 @@
     @include('components.product')
     @include('sweetalert::alert')
 
-    <section id="hero" class="hero d-flex align-items-center section-bg section-t">
-        <div class="container">
+    <section id="hero" class=" hero d-flex align-items-center section-bg section-t">
+        <div class="container-fluid px-3 px-md-3 px-lg-4">
             @foreach ($hero as $item)
                 <div class="row justify-content-end gy-5">
-                    <div class="col-lg-5 order-1 order-lg-1 d-flex flex-column align-items-lg-start text-center text-lg-start"
-                        style="text-align: end;">
+                    <div class="col-lg-5 order-1 order-lg-1 d-flex flex-column justify-content-end align-items-lg-start text-center text-lg-start">
                         <div class="descri">
                             <h2 data-aos="fade-up">
                                 {{ $item->title }}
@@ -35,7 +34,7 @@
     <main id="main">
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us section-bg">
-            <div class="container" data-aos="fade-up">
+            <div class="container-fluid px-3 px-md-3 px-lg-4" data-aos="fade-up">
 
                 <div class="row gy-4">
                     @foreach ($info as $item)
@@ -86,7 +85,7 @@
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services-mf pt-5 route">
-            <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
                 <div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="title-box text-center">
@@ -122,7 +121,7 @@
 
         <!-- Features Section -->
         <section id="features" class="features">
-            <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
 
                 <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
@@ -150,11 +149,11 @@
         
         <!-- Project Section -->
         <section class="project mb-4" style="margin-top: -100px;">
-            <div class="container-fluid ">
-                <div class="container justify-content-center">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
+                <div class="justify-content-center">
                     <div class="text-center mb-5">
                         <h1 class="mb-3">Nossos Modelos de Website Clássico</h1>
-                        <p style="font-size: 1rem;">Websites clássicos intuitivos para toda a empresa que quer ter mais visibilidade na internet e tornar a sua empresa mais profissional.</p>
+                        <p style="font-size: 1rem;">Websites clássicos intuitivos para profissionalizar e tornar a sua empresa mais visível na internet</p>
                     </div>
 
                     <div class="col-12 col-md-12 col-lg-12">
@@ -179,6 +178,15 @@
                             </div>
 
                             <div class="col-12 col-md-3 col-lg-4">
+                                <a href="https://servico.fortcodedev.com/" target="_blank" class="card">
+                                    <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h3>Serviço</h3>
+                                    </div>
+                                </a>{{-- --}}
+                            </div>
+                            {{-- <div class="col-12 col-md-3 col-lg-4">
                                 <a href="https://produto.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
                                         alt="...">
@@ -186,7 +194,7 @@
                                         <h3>Produto</h3>
                                     </div>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -194,40 +202,49 @@
         </section>
 
         <section class="text-white" id="detalhesite">
-            <div class="container-fluid">
-                <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
+                <div class="">
                     <div style="margin-bottom: 40px;">
                         <h2>Porquê ter um website?</h2>
                     </div>
                     <div class="">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-sm-12">
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Canal de vendas aberto 24H por dia todo ano</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Contacto 24H por dia com clientes</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Maior visibilidade a potenciais clientes</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Expanção do seu mercado de actuação</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i> 
-                                    <span>Promoção focada nos seus produtos e serviços</span>
-                                </p>
-                                <p><i class="bi bi-circle-fill"></i> 
-                                    <span>Grande diferencial em relação aos seus concorrentes</span>
-                                </p>
-                                <p><i class="bi bi-circle-fill"></i>
-                                    <span>Mais credibilidade para sua empresa/marca</span>
-                                </p>
+                            <div class="col-12 col-md-6 col-sm-12 d-flex flex-column align-items-start">
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Canal de vendas aberto 24H por dia todo ano</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Contacto 24H por dia com clientes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Maior visibilidade a potenciais clientes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Expanção do seu mercado de actuação</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Promoção focada nos seus produtos e serviços</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Grande diferencial em relação aos seus concorrentes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Mais credibilidade para sua empresa/marca</p></div>
+                                </div>
+
                                 <a data-aos="fade-up" href="#" class="btn btn-primary py-3 mt-2"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 300px;font-size: 1rem;font-weight: 600">Adira
                                     já gratuitamente</a>
@@ -244,7 +261,7 @@
 
         <!-- About Section -->
         <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
+            <div class="container-fluid px-3 px-md-3 px-lg-4" data-aos="fade-up">
                 <div class="d-flex">
                     <div>
                         <div class="col-sm-12 section-header d-flex justify-content-md-center justify-content-sm-center">
@@ -323,7 +340,7 @@
     <!-- End main -->
 
     <div class="container-fluid mb-2">
-        <div class="container position-relative">
+        <div class=" position-relative">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($Horizontal as $item)
