@@ -1,6 +1,6 @@
  <!-- Header -->
   <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container-fluid px-3 px-md-3 px-lg-3 d-flex align-items-center justify-content-between">
 
         <a href="{{route("site.karamba.index")}}" class="logo d-flex align-items-center me-auto me-lg-0">
           <img src="{{asset("/icons/fort.png")}}" alt="" style="font-size: 2rem;">
