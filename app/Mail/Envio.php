@@ -3,27 +3,24 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Mail\Message;
 use Illuminate\Queue\SerializesModels;
 
 class Envio extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
-
-    /**
-     * Create a new message instance.
-     */
-    public function __construct($data)
+    public $name, $email, $subject, $message;
+    
+    public function __construct($name, $email, $subject, $message)
     {
-        //
-        $this->data = $data;
+        $this->name = $name;
+        $this->email = $email;
+        $this->subject = $subject;
+        $this->message = $message;
     }
 
     /**
@@ -32,8 +29,8 @@ class Envio extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->data["subject"],
-            from: new Address($this->data["email"], $this->data["name"]),
+            from: new Address("pachecobarrosodig3@gmail.com", $this->name),
+            subject: $this->subject
         );
     }
 
@@ -45,7 +42,12 @@ class Envio extends Mailable
         
         return new Content(
             markdown: 'emails.Envio',
-            with: ["data" => $this->data]
+            with: [
+                'name' => $this->name,
+                'email' => $this->email,
+                'subject' => $this->subject,
+                'message' => $this->message,
+            ]
         );
     }
 

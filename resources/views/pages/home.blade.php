@@ -154,7 +154,7 @@
                 <div class="container justify-content-center">
                     <div class="text-center mb-5">
                         <h1 class="mb-3">Nossos Modelos de Website Clássico</h1>
-                        <p style="font-size: 1rem;">Websites clássicos intuitivos para toda a empresa que quer ter mais visibilidade na internet e tornar a sua empresa mais profissional.</p>
+                        <p style="font-size: 1rem;">Websites clássicos intuitivos para profissionalizar e tornar a sua empresa mais visível na internet</p>
                     </div>
 
                     <div class="col-12 col-md-12 col-lg-12">
@@ -179,6 +179,15 @@
                             </div>
 
                             <div class="col-12 col-md-3 col-lg-4">
+                                <a href="https://servico.fortcodedev.com/" target="_blank" class="card">
+                                    <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h3>Serviço</h3>
+                                    </div>
+                                </a>{{-- --}}
+                            </div>
+                            {{-- <div class="col-12 col-md-3 col-lg-4">
                                 <a href="https://produto.fortcodedev.com/" target="_blank" class="card">
                                     <img src="{{ asset('site/assets/img/produto.png') }}" class="card-img-top"
                                         alt="...">
@@ -186,7 +195,7 @@
                                         <h3>Produto</h3>
                                     </div>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -201,33 +210,42 @@
                     </div>
                     <div class="">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-sm-12">
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Canal de vendas aberto 24H por dia todo ano</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Contacto 24H por dia com clientes</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Maior visibilidade a potenciais clientes</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i>
-                                    <span>Expanção do seu mercado de actuação</span>
-                                </p>
-                                <p>
-                                    <i class="bi bi-circle-fill"></i> 
-                                    <span>Promoção focada nos seus produtos e serviços</span>
-                                </p>
-                                <p><i class="bi bi-circle-fill"></i> 
-                                    <span>Grande diferencial em relação aos seus concorrentes</span>
-                                </p>
-                                <p><i class="bi bi-circle-fill"></i>
-                                    <span>Mais credibilidade para sua empresa/marca</span>
-                                </p>
+                            <div class="col-12 col-md-6 col-sm-12 d-flex flex-column align-items-start">
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Canal de vendas aberto 24H por dia todo ano</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Contacto 24H por dia com clientes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Maior visibilidade a potenciais clientes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Expanção do seu mercado de actuação</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Promoção focada nos seus produtos e serviços</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Grande diferencial em relação aos seus concorrentes</p></div>
+                                </div>
+
+                                <div class="d-flex g-2">
+                                    <div style="margin-top: 5.25px;"><i class="bi bi-circle-fill me-2"></i></div>
+                                    <div><p class="ps-0">Mais credibilidade para sua empresa/marca</p></div>
+                                </div>
+
                                 <a data-aos="fade-up" href="#" class="btn btn-primary py-3 mt-2"
                                     data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 300px;font-size: 1rem;font-weight: 600">Adira
                                     já gratuitamente</a>

@@ -93,6 +93,10 @@
               .contact .container .map-responsive iframe{
                 width: 100%;
               }
+
+              .contact .info-item {
+                  width: 620px;
+                }
             }
 
             /* TABLET RESPONSIVE*/
