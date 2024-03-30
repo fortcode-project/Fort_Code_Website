@@ -7,12 +7,11 @@
     @include('components.product')
     @include('sweetalert::alert')
 
-    <section id="hero" class="hero d-flex align-items-center section-bg section-t">
-        <div class="container">
+    <section id="hero" class=" hero d-flex align-items-center section-bg section-t">
+        <div class="container-fluid px-3 px-md-3 px-lg-4">
             @foreach ($hero as $item)
                 <div class="row justify-content-end gy-5">
-                    <div class="col-lg-5 order-1 order-lg-1 d-flex flex-column align-items-lg-start text-center text-lg-start"
-                        style="text-align: end;">
+                    <div class="col-lg-5 order-1 order-lg-1 d-flex flex-column justify-content-end align-items-lg-start text-center text-lg-start">
                         <div class="descri">
                             <h2 data-aos="fade-up">
                                 {{ $item->title }}
@@ -35,7 +34,7 @@
     <main id="main">
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us section-bg">
-            <div class="container" data-aos="fade-up">
+            <div class="container-fluid px-3 px-md-3 px-lg-4" data-aos="fade-up">
 
                 <div class="row gy-4">
                     @foreach ($info as $item)
@@ -86,7 +85,7 @@
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services-mf pt-5 route">
-            <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
                 <div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="title-box text-center">
@@ -122,7 +121,7 @@
 
         <!-- Features Section -->
         <section id="features" class="features">
-            <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
 
                 <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
@@ -150,8 +149,8 @@
         
         <!-- Project Section -->
         <section class="project mb-4" style="margin-top: -100px;">
-            <div class="container-fluid ">
-                <div class="container justify-content-center">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
+                <div class="justify-content-center">
                     <div class="text-center mb-5">
                         <h1 class="mb-3">Nossos Modelos de Website Clássico</h1>
                         <p style="font-size: 1rem;">Websites clássicos intuitivos para profissionalizar e tornar a sua empresa mais visível na internet</p>
@@ -203,8 +202,8 @@
         </section>
 
         <section class="text-white" id="detalhesite">
-            <div class="container-fluid">
-                <div class="container">
+            <div class="container-fluid px-3 px-md-3 px-lg-4">
+                <div class="">
                     <div style="margin-bottom: 40px;">
                         <h2>Porquê ter um website?</h2>
                     </div>
@@ -262,7 +261,7 @@
 
         <!-- About Section -->
         <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
+            <div class="container-fluid px-3 px-md-3 px-lg-4" data-aos="fade-up">
                 <div class="d-flex">
                     <div>
                         <div class="col-sm-12 section-header d-flex justify-content-md-center justify-content-sm-center">
@@ -341,7 +340,7 @@
     <!-- End main -->
 
     <div class="container-fluid mb-2">
-        <div class="container position-relative">
+        <div class=" position-relative">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($Horizontal as $item)
